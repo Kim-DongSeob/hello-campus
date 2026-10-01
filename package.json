@@ -1,0 +1,13 @@
+{
+  "name": "hello-campus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node --check dist/app.js && node --check dist/event-core.js && node scripts/verify.mjs",
+    "test": "node --test scripts/event-core.test.mjs"
+  },
+  "engines": { "node": "22.x" }
+}

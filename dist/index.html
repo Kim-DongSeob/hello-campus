@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b8eee0">
+  <meta name="description" content="너의 시작에, 설렘을 더해! 퀴즈, 룰렛, 스크래치와 함께하는 새봄대학교 신입생 웰컴 페스티벌. 포트폴리오용 체험 이벤트입니다.">
+  <meta property="og:title" content="HELLO, CAMPUS! — 너의 시작에, 설렘을 더해">
+  <meta property="og:description" content="퀴즈부터 럭키 룰렛까지, 새로운 시작을 축하하는 네 가지 즐거움.">
+  <meta property="og:type" content="website">
+  <title>HELLO, CAMPUS! | 새봄대학교 웰컴 페스티벌</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#events">이벤트로 바로 가기</a>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="새봄대학교 첫 화면"><img src="/favicon.svg" width="43" height="43" alt=""><span>새봄대학교<small>SAEBOM UNIVERSITY</small></span></a>
+      <nav aria-label="주 메뉴"><a href="#about">이벤트 소개</a><a href="#events">이벤트 참여</a><a href="#guide">참여 안내</a></nav>
+      <button type="button" class="share-button" id="share-button" aria-label="친구에게 공유"><span>친구에게 공유</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-5 5 5-5 5 5M5 13v7h14v-7"/></svg></button>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" id="about" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span>2027 신입생 웰컴 페스티벌</div>
+          <p class="hero-kicker">HELLO, CAMPUS!</p>
+          <h1 id="hero-title">너의 시작에,<br><span>설렘을 더해!</span><span class="title-star" aria-hidden="true">✳</span></h1>
+          <p class="hero-description">합격의 기쁨은 크게, 선물은 더 풍성하게.<br>새봄에서 펼쳐질 너의 내일을 응원해.</p>
+          <a class="button button-dark hero-cta" href="#events">지금 이벤트 참여하기 <span aria-hidden="true">↗</span></a>
+          <div class="hero-period"><span>EVENT PERIOD</span><strong>2026. 10. 01 <i>—</i> 10. 31</strong></div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="art-spark spark-one" aria-hidden="true">✧</span><span class="art-spark spark-two" aria-hidden="true">✳</span>
+          <div class="hello-sticker">새로운 시작,<br><strong>너라서 빛나!</strong><span aria-hidden="true">✦</span></div>
+          <img class="hero-image" src="/assets/welcome-gift.webp" alt="학사모를 쓴 별 마스코트와 보라색 선물 상자, 새 출발을 축하하는 일러스트" width="1145" height="1374" fetchpriority="high">
+          <div class="art-caption"><span class="tiny-star" aria-hidden="true">✦</span> YOUR NEXT CHAPTER STARTS HERE</div>
+        </div>
+      </div>
+      <div class="hero-bottom"><span><span class="small-dot"></span> 매일 만나는 작은 행운, 오늘의 주인공은 너!</span><a href="#events" aria-label="아래 이벤트 보기">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div>HELLO, CAMPUS! <span>✳</span> GOOD LUCK, NEW START! <span>✳</span> YOUR NEXT CHAPTER <span>✳</span> HELLO, CAMPUS! <span>✳</span> GOOD LUCK, NEW START! <span>✳</span></div></div>
+    <section class="events section-wrap" id="events" aria-labelledby="events-title">
+      <div class="section-heading"><div><p class="section-label">LET’S CELEBRATE TOGETHER</p><h2 id="events-title">설렘 가득, <span>네 가지 즐거움.</span></h2></div><p>가볍게 참여하고, 기분 좋게 즐겨봐.<br>너의 캠퍼스 라이프에 행운을 더해줄게!</p></div>
+      <div class="event-tabs" role="tablist" aria-label="참여할 이벤트 선택">
+        <button id="tab-quiz" role="tab" aria-controls="panel-quiz" aria-selected="true" tabindex="0" data-event="quiz"><span class="tab-no">01</span><span>캠퍼스 퀴즈<small>알아가는 재미</small></span><span class="tab-symbol" aria-hidden="true">?</span></button>
+        <button id="tab-wheel" role="tab" aria-controls="panel-wheel" aria-selected="false" tabindex="-1" data-event="wheel"><span class="tab-no">02</span><span>행운의 룰렛<small>돌리는 설렘</small></span><span class="tab-symbol" aria-hidden="true">✳</span></button>
+        <button id="tab-scratch" role="tab" aria-controls="panel-scratch" aria-selected="false" tabindex="-1" data-event="scratch"><span class="tab-no">03</span><span>럭키 스크래치<small>긁어보는 행운</small></span><span class="tab-symbol" aria-hidden="true">✦</span></button>
+        <button id="tab-message" role="tab" aria-controls="panel-message" aria-selected="false" tabindex="-1" data-event="message"><span class="tab-no">04</span><span>나에게 한마디<small>시작을 향한 응원</small></span><span class="tab-symbol" aria-hidden="true">♡</span></button>
+      </div>
+      <div class="event-panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz" tabindex="0">
+        <div class="panel-intro"><span class="event-chip">EVENT 01 <i></i> CAMPUS QUIZ</span><h3>우리, 조금 더<br> 알아가 볼까?</h3><p>새봄과의 첫 만남을 위한 아주 쉬운 퀴즈.<br>정답을 고르고 첫 번째 행운을 만나봐!</p><div class="intro-doodle" aria-hidden="true"><span>Q</span><span>!</span><i>✦</i></div><p class="panel-note">누구나 참여할 수 있는 체험 이벤트</p></div>
+        <form class="quiz-card" id="quiz-form"><div class="question-top"><span>오늘의 캠퍼스 퀴즈</span><span>01 / 01</span></div><div class="question-icon" aria-hidden="true">Q.</div><h4>새로운 가능성이 피어나는 곳,<br>우리의 이름은 무엇일까요?</h4><p class="question-hint">HINT. 따뜻한 계절의 시작을 떠올려봐.</p><fieldset><legend class="sr-only">퀴즈 정답 선택</legend><label class="quiz-option"><input type="radio" name="answer" value="summer" required><span class="option-number">①</span><span>새여름대학교</span><span class="radio-dot"></span></label><label class="quiz-option"><input type="radio" name="answer" value="spring"><span class="option-number">②</span><span>새봄대학교</span><span class="radio-dot"></span></label><label class="quiz-option"><input type="radio" name="answer" value="winter"><span class="option-number">③</span><span>새겨울대학교</span><span class="radio-dot"></span></label></fieldset><p id="quiz-feedback" class="feedback" role="status"></p><button class="button button-dark full-button" type="submit">정답 확인하고 행운 받기 <span aria-hidden="true">→</span></button></form>
+      </div>
+      <div class="event-panel" id="panel-wheel" role="tabpanel" aria-labelledby="tab-wheel" tabindex="0" hidden>
+        <div class="panel-intro"><span class="event-chip">EVENT 02 <i></i> LUCKY ROULETTE</span><h3>빙글빙글,<br> 오늘의 행운은?</h3><p>두근거리는 마음으로 룰렛을 돌려봐.<br>새로운 시작에 달콤한 행운이 찾아올 거야.</p><div class="mini-badge">100%<span>기분 좋은 행운</span></div><p class="panel-note">경품이 지급되지 않는 룰렛 체험입니다.</p></div>
+        <div class="wheel-area"><div class="wheel-wrap"><div class="wheel-pointer" aria-hidden="true"></div><div id="wheel" class="wheel" aria-label="커피, 응원, 도넛, 행운, 아이스크림, 선물 룰렛"><span class="wheel-label l0">☕<small>커피 타임</small></span><span class="wheel-label l1">♡<small>응원 가득</small></span><span class="wheel-label l2">🍩<small>달콤 도넛</small></span><span class="wheel-label l3">✦<small>반짝 행운</small></span><span class="wheel-label l4">🍦<small>아이스크림</small></span><span class="wheel-label l5">🎁<small>깜짝 선물</small></span></div><div class="wheel-center" aria-hidden="true">GOOD<br>LUCK!</div></div><p class="feedback" id="wheel-feedback" role="status">행운은 언제나 가까이에!</p><button id="spin-button" class="button button-dark" type="button">나의 행운 돌려보기 <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <div class="event-panel" id="panel-scratch" role="tabpanel" aria-labelledby="tab-scratch" tabindex="0" hidden>
+        <div class="panel-intro"><span class="event-chip">EVENT 03 <i></i> LUCKY SCRATCH</span><h3>살짝 긁으면,<br> 행운이 반짝!</h3><p>카드 위를 손가락이나 마우스로 긁어봐.<br>너를 기다리고 있는 작은 선물이 숨어 있어.</p><div class="scratch-doodle" aria-hidden="true">✧ <span>✦</span> ✧</div><p class="panel-note">아래 버튼으로도 결과를 확인할 수 있어요.</p></div>
+        <div class="scratch-area"><div class="scratch-ticket"><div class="ticket-header">A LITTLE LUCK FOR YOU <span>✦</span></div><div class="scratch-surface"><div class="scratch-result" id="scratch-result" aria-hidden="true"><span aria-hidden="true">🍦</span><h4>달콤한 하루 당첨!</h4><p>아이스크림처럼 기분 좋은 시작을 응원해.</p><small>체험용 결과 · 실제 경품 지급 없음</small></div><canvas id="scratch-canvas" width="700" height="420" aria-label="마우스나 손가락으로 긁는 행운 카드"></canvas></div><div class="ticket-bottom">HELLO, CAMPUS! <span>NO. 0001</span></div></div><p class="feedback" id="scratch-feedback" role="status">카드를 긁어 숨겨진 행운을 찾아보세요.</p><button id="reveal-button" class="button button-dark" type="button">버튼으로 행운 확인하기 <span aria-hidden="true">✦</span></button></div>
+      </div>
+      <div class="event-panel" id="panel-message" role="tabpanel" aria-labelledby="tab-message" tabindex="0" hidden>
+        <div class="panel-intro"><span class="event-chip">EVENT 04 <i></i> DEAR, TOMORROW</span><h3>내일의 나에게,<br> 오늘의 한마디.</h3><p>기대해도 좋아, 앞으로의 너를.<br>새로운 시작을 앞둔 나에게 응원을 남겨봐.</p><div class="letter-doodle" aria-hidden="true">♡</div><p class="panel-note">작성한 내용은 외부에 전송하거나 저장하지 않아요.</p></div>
+        <form id="message-form" class="message-card"><span class="postcard-label">POSTCARD TO MY FUTURE SELF <span aria-hidden="true">✉</span></span><label for="nickname">받는 사람</label><input id="nickname" name="nickname" placeholder="이름 대신 별명을 적어주세요" required maxlength="12" autocomplete="off"><label for="welcome-message">나에게 보내는 응원</label><textarea id="welcome-message" name="message" placeholder="새로운 시작 앞에 선 너에게, 분명 멋진 일들이 기다리고 있을 거야!" required minlength="5" maxlength="120" rows="4"></textarea><div class="message-meta"><button type="button" id="suggest-message">응원 문구 추천받기 ↻</button><span id="char-count">0 / 120</span></div><button type="submit" class="button button-dark full-button">나만의 응원 카드 만들기 <span aria-hidden="true">→</span></button></form>
+      </div>
+      <p class="demo-caption"><span aria-hidden="true">ⓘ</span> 새봄대학교는 가상의 브랜드입니다. 모든 이벤트는 경품 지급 및 개인정보 수집이 없는 포트폴리오 체험입니다.</p>
+    </section>
+    <section class="prizes" aria-labelledby="prizes-title"><div class="section-wrap"><div class="section-heading"><div><p class="section-label">LITTLE GIFTS, BIG SMILES</p><h2 id="prizes-title">작은 선물, <span>커다란 설렘.</span></h2></div><p>캠퍼스의 첫 순간을 더 특별하게.<br>이런 선물과 함께라면, 시작부터 좋은 날!</p></div><div class="prize-grid">
+      <article class="prize-card prize-coffee"><div class="prize-visual"><div class="coffee-art" aria-hidden="true"><div class="coffee-lid"></div><div class="coffee-cup"><span>hello<br><b>☀</b><br>campus</span></div></div><span class="prize-spark" aria-hidden="true">✧</span></div><div class="prize-info"><span>FOR YOUR FRESH START</span><h3>여유 한 잔, 커피 타임</h3><p>첫 수업 전, 설렘을 깨우는 한 모금.</p></div><span class="prize-tag">COFFEE</span></article>
+      <article class="prize-card prize-donut"><div class="prize-visual"><div class="donut-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="prize-spark" aria-hidden="true">✳</span></div><div class="prize-info"><span>A SWEET LITTLE MOMENT</span><h3>달콤 충전, 도넛 한 입</h3><p>새 친구와 나누면 두 배로 달콤해.</p></div><span class="prize-tag">DESSERT</span></article>
+      <article class="prize-card prize-gift"><div class="prize-visual"><div class="gift-art" aria-hidden="true"><div class="gift-bow"></div><div class="gift-lid"></div><div class="gift-box"></div></div><span class="prize-spark" aria-hidden="true">✦</span></div><div class="prize-info"><span>JUST FOR YOU</span><h3>두근두근, 서프라이즈</h3><p>예상하지 못한 순간에 찾아오는 행운.</p></div><span class="prize-tag">SURPRISE</span></article>
+    </div><p class="prize-disclaimer">이해를 돕기 위한 예시 경품입니다. 체험 결과는 실제 교환권으로 사용할 수 없습니다.</p></div></section>
+    <section class="guide section-wrap" id="guide" aria-labelledby="guide-title"><div><p class="section-label">BEFORE YOU JOIN</p><h2 id="guide-title">참여 전,<br> 확인해 주세요.</h2><p class="guide-aside">궁금한 내용을 먼저 확인하고<br>더 즐겁게 참여해 보세요.</p></div><div class="faq-list"><details open><summary>누가 참여할 수 있나요?<span aria-hidden="true"></span></summary><p>누구나 자유롭게 체험할 수 있어요. 실제 대학의 입학 여부와 관계없는 포트폴리오용 이벤트이며, 수험번호나 연락처를 입력할 필요가 없습니다.</p></details><details><summary>당첨된 경품은 어떻게 받나요?<span aria-hidden="true"></span></summary><p>이 페이지는 이벤트 기능을 보여드리는 데모입니다. 화면에 나오는 당첨 결과와 경품은 예시이며, 실제 기프티콘이나 상품은 발송되지 않습니다.</p></details><details><summary>참여 횟수와 기간이 정해져 있나요?<span aria-hidden="true"></span></summary><p>표시된 일정은 디자인을 위한 예시입니다. 체험에는 횟수 제한이 없으며, 룰렛과 스크래치를 다시 즐길 수 있어요. 실제 운영 시에는 이벤트 기간과 참여 조건을 별도로 설정해야 합니다.</p></details><details><summary>입력한 정보는 어디에 저장되나요?<span aria-hidden="true"></span></summary><p>퀴즈 선택, 별명, 응원 문구는 현재 화면에서만 사용합니다. 서버·쿠키·브라우저 저장소에 보관하지 않으며, 새로고침하면 초기화됩니다. 실제 이름이나 연락처 같은 개인정보는 입력하지 마세요.</p></details></div></section>
+    <section class="closing"><span aria-hidden="true">✳</span><p>우리의 가장 빛나는 순간은,<br><strong>이제부터 시작이야.</strong></p><a href="#top" aria-label="맨 위로 이동">↑</a></section>
+  </main>
+  <footer><div class="footer-inner"><a class="brand" href="#top"><img src="/favicon.svg" alt="" width="37" height="37"><span>새봄대학교<small>SAEBOM UNIVERSITY</small></span></a><p>HELLO, CAMPUS! · 2027 WELCOME FESTIVAL<br><small>© 2026 HELLO CAMPUS. A fictional university event portfolio.</small></p><span class="footer-demo">DESIGNED FOR NEW BEGINNINGS ↗</span></div></footer>
+  <dialog id="result-dialog" aria-labelledby="result-title"><button type="button" class="modal-close" id="close-dialog" aria-label="결과 창 닫기">×</button><span class="result-eyebrow">A LITTLE MOMENT OF JOY</span><div class="result-symbol" id="result-symbol" aria-hidden="true">✦</div><h2 id="result-title"></h2><p id="result-description"></p><div id="postcard-content" hidden></div><p class="result-note" id="result-note">체험용 결과이며 실제 경품은 지급되지 않습니다.</p><button class="button button-dark full-button" id="confirm-dialog" type="button">좋아, 다음 행운도 만나볼래!</button></dialog>
+  <dialog id="share-dialog" aria-labelledby="share-title"><button class="modal-close" id="close-share" aria-label="공유 창 닫기" type="button">×</button><p class="section-label">SHARE THE GOOD VIBES</p><h2 id="share-title">설렘을 함께 나눠요.</h2><p>아래 주소를 복사해 친구에게 보내주세요.</p><label class="sr-only" for="share-url">공유할 페이지 주소</label><input id="share-url" readonly><button class="button button-dark full-button" id="copy-link" type="button">링크 복사하기 ↗</button><p id="share-status" role="status"></p></dialog>
+  <div id="toast" role="status" class="toast"></div><div id="confetti" aria-hidden="true"></div>
+  <noscript><div class="noscript">이벤트를 체험하려면 브라우저에서 JavaScript를 켜주세요. 이벤트 소개와 참여 안내는 그대로 확인할 수 있습니다.</div></noscript>
+</body>
+</html>
