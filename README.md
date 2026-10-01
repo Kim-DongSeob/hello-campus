@@ -1,5 +1,9 @@
 # HELLO, CAMPUS! — 새봄대학교 웰컴 페스티벌
 
+**배포 사이트:** https://hello-campus.vercel.app
+
+**GitHub:** https://github.com/Kim-DongSeob/hello-campus
+
 민트·라벤더 색상과 입체 별 마스코트로 만든 한국어 대학 신입생 이벤트 페이지입니다. [참고 페이지](https://onlinepage.co.kr/2024sangji/portfolio.php)의 축하 캠페인, 퀴즈, 룰렛, 스크래치 흐름을 현대적인 반응형 화면으로 재구성했습니다.
 
 새봄대학교는 가상의 브랜드입니다. 실제 대학의 공식 행사, 입학 접수 또는 경품 추첨 서비스가 아닙니다.
