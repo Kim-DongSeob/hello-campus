@@ -36,6 +36,12 @@ tabs.forEach((tab, index) => {
   });
 });
 const resultDialog = $('#result-dialog');
+function makeRibbon() {
+  const icon = document.createElement('span');
+  icon.className = 'ribbon-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  return icon;
+}
 function celebrate() {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   $('#confetti').replaceChildren();
@@ -53,10 +59,11 @@ function celebrate() {
     $('#confetti').append(piece);
   }
 }
-function showResult({ title, description, symbol = '✦', postcard = '' }) {
+function showResult({ title, description, symbol = 'ribbon', postcard = '' }) {
   $('#result-title').textContent = title;
   $('#result-description').textContent = description;
-  $('#result-symbol').textContent = symbol;
+  if (symbol === 'ribbon') $('#result-symbol').replaceChildren(makeRibbon());
+  else $('#result-symbol').textContent = symbol;
   $('#postcard-content').hidden = !postcard;
   $('#postcard-content').textContent = postcard;
   $('#result-note').textContent = postcard ? '응원 문구는 저장되지 않아요. 마음에 든다면 화면을 간직해 주세요.' : '체험용 결과이며 실제 경품은 지급되지 않습니다.';
@@ -85,7 +92,7 @@ $('#quiz-form').addEventListener('submit', event => {
   }
   $('#quiz-feedback').classList.remove('error');
   $('#quiz-feedback').textContent = '정답이야! 새봄에서의 새로운 시작을 환영해.';
-  showResult({ title: '정답! 만나서 반가워.', description: '새로운 가능성이 피어나는 새봄대학교. 너와 함께 만들어갈 내일을 기대할게!', symbol: '✦' });
+  showResult({ title: '정답! 만나서 반가워.', description: '새로운 가능성이 피어나는 새봄대학교. 너와 함께 만들어갈 내일을 기대할게!', symbol: 'ribbon' });
 });
 let rotation = 0;
 let spinning = false;
@@ -139,10 +146,18 @@ function initScratch() {
   for (let x = 20; x < 700; x += 40) for (let y = 20; y < 420; y += 40) { ctx.beginPath(); ctx.arc(x, y, 2, 0, Math.PI * 2); ctx.fill(); }
   ctx.textAlign = 'center';
   ctx.fillStyle = '#54416e';
-  ctx.font = '700 70px Pretendard, sans-serif'; ctx.fillText('✦', 350, 148);
+  ctx.save();
+  ctx.translate(311, 70);
+  ctx.scale(1.2, 1.2);
+  ctx.strokeStyle = '#54416e';
+  ctx.lineWidth = 3.5;
+  ctx.lineCap = 'round';
+  ctx.lineJoin = 'round';
+  ctx.stroke(new Path2D('M32 31C22 32 8 28 8 19C8 6 25 10 32 31ZM32 31C34 19 47 6 54 15C62 26 45 34 32 31ZM31 33C26 39 28 49 17 54M34 33C42 35 41 48 52 46'));
+  ctx.restore();
   ctx.font = '800 34px Pretendard, sans-serif'; ctx.fillText('SCRATCH YOUR LUCK', 350, 224);
   ctx.font = '400 22px Pretendard, sans-serif'; ctx.fillText('여기를 긁어 행운을 확인해 봐!', 350, 273);
-  $('#reveal-button').textContent = '버튼으로 행운 확인하기 ✦';
+  $('#reveal-button').replaceChildren(document.createTextNode('버튼으로 행운 확인하기 '), makeRibbon());
   $('#scratch-feedback').textContent = '카드를 긁어 숨겨진 행운을 찾아보세요.';
 }
 function revealScratch() {
